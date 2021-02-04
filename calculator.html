@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <div>1st number: <input v-model="number1" type="text"></div>
+    <div>2nd number: <input v-model="number2" type="text"></div>
+    <div>3rd number: <input v-model="number3" type="text"></div>
+    <div><button v-on:click="calculate()">Compute sum</button></div>
+    <p v-if="totalSum">The sum is: {{ totalSum }}</p>
+  </div>
+</body>
+</html>

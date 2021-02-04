@@ -16,6 +16,11 @@
     <br>
     <br>
     <input v-model="message" type="text">
+    <div>
+      <p v-for="fruit in fruits">{{ fruit }}</p>
+      <input v-model="newFruit" type="text">
+      <button v-on:click="addFruit()">Add new fruit</button>
+    </div>
   </div>
 </body>
 </html>
