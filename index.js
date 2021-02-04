@@ -8,4 +8,10 @@ var app = new Vue({
       name: "Peter",
     };
   },
+  methods: {
+    upperName: function () {
+      console.log("upperName", this.message, this.name);
+      this.name = this.name.toUpperCase();
+    },
+  },
 });

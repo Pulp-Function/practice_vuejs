@@ -12,6 +12,9 @@
   <div id="app">
     <h2>{{ message }}</h2>
     <p>{{ name }}</p>
+    <button v-on:click="upperName()">Click me to uppercase the name!</button>
+    <br>
+    <br>
     <input v-model="message" type="text">
   </div>
 </body>
