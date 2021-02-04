@@ -6,10 +6,20 @@
   <title>Practice Vue.js</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="index.js" defer></script>
+  <style>
+    .disabled {
+      color: lightgray;
+      transition: color 1s ease;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello from HTML!</h1>
   <div id="app">
+    <button v-on:click="disableText = !disableText">Toggle text disable</button>
+    <p v-bind:class="{disabled: disableText}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <br>
+
     <button v-on:click="showText = !showText">Toggle info</button>
     <p v-if="showText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <h2>{{ message }}</h2>

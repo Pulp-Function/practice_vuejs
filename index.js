@@ -9,6 +9,7 @@ var app = new Vue({
       newFruit: "",
       fruits: ["apple", "banana", "cantaloupe"],
       showText: true,
+      disableText: true,
     };
   },
   methods: {
