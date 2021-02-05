@@ -10,6 +10,10 @@
 <body>
   <div id="app">
     <h1>{{ message }}</h1>
+    <div>
+      New Title: <input type="text" v-model="newTodoTitle">
+      <button v-on:click="createTodo()">Create a new todo</button>
+    </div>
     <ol>
       <li v-for="x in todos">
         <h4>Title: {{ x.title }}</h4>

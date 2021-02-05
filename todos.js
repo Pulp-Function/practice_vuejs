@@ -6,6 +6,7 @@ var app = new Vue({
     return {
       message: "Hello to my todo app!",
       todos: [],
+      newTodoTitle: "Sample title",
     };
   },
   created: function () {
@@ -17,6 +18,19 @@ var app = new Vue({
       axios.get("https://jsonplaceholder.typicode.com/todos").then((response) => {
         console.log(response);
         this.todos = response.data;
+      });
+    },
+    createTodo: function () {
+      console.log("createTodo");
+      var params = {
+        userId: 1,
+        title: this.newTodoTitle,
+        completed: false,
+      };
+      axios.post("https://jsonplaceholder.typicode.com/todos", params).then((response) => {
+        console.log("post", response);
+        this.todos.push(response.data);
+        this.newTodoTitle = "";
       });
     },
   },
