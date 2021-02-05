@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todos app</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="todos.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <div>
+      <button v-on:click="loadTodos()">Load todos</button>
+    </div>
+    <ol>
+      <li v-for="x in todos">
+        <h4>Title: {{ x.title }}</h4>
+        <p>Completed: {{ x.completed }}</p>
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
