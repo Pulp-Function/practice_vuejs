@@ -8,6 +8,9 @@ var app = new Vue({
       todos: [],
     };
   },
+  created: function () {
+    this.loadTodos();
+  },
   methods: {
     loadTodos: function () {
       console.log("loadTodos");

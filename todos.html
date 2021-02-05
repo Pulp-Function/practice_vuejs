@@ -10,9 +10,6 @@
 <body>
   <div id="app">
     <h1>{{ message }}</h1>
-    <div>
-      <button v-on:click="loadTodos()">Load todos</button>
-    </div>
     <ol>
       <li v-for="x in todos">
         <h4>Title: {{ x.title }}</h4>
